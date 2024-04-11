@@ -1,0 +1,13 @@
+public class PrimeNumber {
+    public static boolean isPrime(int n, int divisor) {
+        if (n < 2) return false;
+        if (divisor == 1) return true;
+        if (n % divisor == 0) return false;
+        return isPrime(n, divisor - 1);
+    }
+
+    public static void main(String[] args) {
+        int number = 11;
+        System.out.println(number + " je prvočíslo? " + isPrime(number, number - 1));
+    }
+}
